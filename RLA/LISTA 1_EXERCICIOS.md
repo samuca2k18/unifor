@@ -102,8 +102,8 @@ flowchart TD
 A([Inicio]) --> B{{Digite sua idade}}
 B --> C[/Idade/]
 C --> D{Idade < 18}	
-D --> |Não| E{{Você não pode tirar CNH faltam, 18 - Idade, anos }}
-D --> |Sim| F{{Você pode tirar CNH}}
+D --> |Sim| E{{Você não pode tirar CNH faltam, 18 - Idade, anos }}
+D --> |Não| F{{Você pode tirar CNH}}
 E --> G([Fim])
 F --> G
 
