@@ -35,8 +35,8 @@ flowchart TD
 A([Inicio]) --> B{{Digite seu salario}}
 B --> C[/Salario/]
 C --> D{Salario < 501}	
-D --> |Não| E[Salario = Salario * 1,2]
-D --> |Sim| F[Salario = Salario * 1,1]
+D --> |Sim| E[Salario = Salario * 1,2]
+D --> |Não| F[Salario = Salario * 1,1]
 E --> G{{Seu salario novo é, Salario}}
 G --> H([Fim])
 F --> G
