@@ -175,8 +175,150 @@ D --> E{{A media do aluno, Nome, é ,media,}}
 
 ```
 
+
+```mermaid 
+flowchart TD
+A([Inicio]) --> B{{Digite o nome do aluno, email e curso do aluno}}
+B --> C[/Nome, Email, Curso/]
+C --> D{{Digite a matricula e idade do aluno}}
+D --> E[/ Matricula e Idade/]
+E --> F{{O nome do aluno é, Nome, a sua matricula é, matricula, o curso que faz é, Curso, sua idade é, Idade, e o email é, Email}}
+F --> G([Fim])
+
+```
+```
+1 ALGORTIMO DADOS_DE_ALUNO
+2 DECLARE Nome, Email, Curso: STRING
+3 DECLARE Matricula, Idade: NUMERICO
+4 ESCREVA "Digite seu nome, curso e email"
+5 LEIA Nome, Email, Curso
+6 ESCREVA "Digite sua matricula e sua idade"
+7 LEIA Matricula, Idade
+8 ESCREVA "Os dados do aluno Nome: ", Nome," sua matricula: ", Matricula," seu curso: ", Curso," sua idade: ", Idade," e o emai: ", Email  
+9 FIM_ALGORITMO
+```
+
 ```mermaid
 flowchart TD
+A([Inicio]) --> B{{Digite o raio}}
+B --> C[/Raio/]
+C --> D[Peri = 2 * 3.14 * Raio]
+D --> E[Area = 3.14 * Raio ** 2]
+E --> F{{A area é de, Area, e o perimetro é de , Peri}}
+F --> G([fim]) 
+```
+
+```
+1 ALGORITMO RAIO
+2 DECLARE Raio, Area, Peri : NUMERICO
+3 ESCREVA "Digite o raio "
+4 LEIA Raio
+5 Area = (Raio ** 2) * 3.14
+6 Peri = 2 * 3.14 * Raio
+7 ESCREVA "A area é ",Area," e o perimetro é ", Peri
+8 FIM_ALGORITMO
 
 
+```
+
+
+```mermaid
+flowchart TD
+A([Inicio]) --> B{{Digite um numero: }}
+B --> C[/N1/]
+C --> D{{O numero ao quadrado é, N1 ** 2, o numero ao cubo é, N1 ** 3, a raiz quadrada do numero é, N1 ** 1/2, a raiz cubica do numero é, N1 ** 1/3,}}
+D --> E([Fim])
+ 
+```
+
+```
+1 ALGORITMO RAIZ_E_EXPOENTE
+2 DECLARE N1
+3 ESCREVA "Digite um numero: "
+4 LEIA N1 
+5 ESCREVA "O numero ao quadrado é ", N1 ** 2, " o numero ao cubo é ", N1 ** 3, " a raiz quadrada do numero é ", N1 ** 1/2, " a raiz cubica do numero é ", N1 ** 1/3
+6 FIM_ALGORITMO
+ ```
+
+```mermaid
+flowchart TD
+A([Inicio]) --> B{{Digite 3 numeros: }}
+B --> C[/N1,N2,N3/]
+C --> D{N1 < N2 e N1 < N3}
+D -->|sim| E{N2 < N3}
+E -->|sim| F{{N1,N2,N3}}
+F --> Z([Fim])
+E -->|nâo| G{{N1,N3,N2}}
+G --> Z
+D -->|NÃO| H{N2 < N1 E N2 <N3}
+H -->|SIM| I{N1 < N3}
+I -->|SIM| J{{N2,N1,N3}}
+J --> Z
+I -->|NÃO| K{{N2,N3,N1}}
+K --> Z
+H -->|NÃO| L{N1 < N2}
+L -->|SIM| M{{N3,N1,N2}}
+M --> Z
+L -->|NÃO| N{{N3,N2,N1}}
+N --> Z
+```
+
+```
+1 ALGORITMO ORDENAÇÃO
+2 DECLARE N1, N2, N3: NUMERICO
+3 ESCREVA "Digite 3 numeros: "
+4 LEIA N1, N2, N3
+5 SE N1 < N2 E N1 < 3
+6 		ENTÃO SE N2 < N3
+7 				ENTÃO ESCREVA "N1,N2,N3"
+8 			   SENÃO
+9 					  ESCREVA "N1,N3,N2"
+10 SENÃO SE N2 < N1 E N2 < N3
+11 		ENTÃO SE N1 < N3
+12 				ENTÃO ESCREVA "N2,N1,N3"
+13			  SENÃO 
+14               ESCREVA " N2,N3,N1"
+15 SENÃO SE N1 < N2
+16 	         ENTÃO ESCREVA " N3,N1,N2"
+17 		 SENÃO 
+18			 ESCREVA "N3,N2,N1"
+19 FIM_ALGORITMO		
+```
+
+```mermaid
+flowchart TD
+A([Inicio]) --> B{{Digite sua idade}}
+B --> C[/Idade/]
+C --> D{Idade > 18}
+D -->|Sim|E{{Sua categoria é adulto}}
+E --> Z([Fim])
+D -->|Não|F{Idade < 18 e Idade > 13}
+F -->|Sim|G{{Sua categoria é juvenil B}}
+G --> Z
+F -->|Não|H{Idade < 14 e Idade > 10}
+H -->|Sim|I{{Sua categoria é juvenil A}}
+I --> Z
+H -->|Não| J{Idade < 11 e Idade > 7}
+J -->|Sim| K{{Sua categoria e infantil B}}
+K --> Z
+J -->|Não| L{{Sua categoria é infantil A}}
+L --> Z
+
+
+```
+
+```
+1 	ALGORITMO CATEGORIA
+2 	DECLARE Idade : numerico
+3 	SE Idade > 18
+4 		ENTAO ESCREVA "Sua categoria é adulto"
+5 	SENAO SE Idade < 18 e > 13
+6 			ENTÃO ESCREVA"Sua categoria é juvenil B"
+7 	SENAO SE IDADE < 14 e Idade > 10
+8 			ENTÃO ESCREVA"Sua categoria é juvenil A"
+9 	SENAO SE Idade < 11 E Idade > 7
+10 			ENTÃO ESCREVA"Sua categoria é infantil B"
+11 	SENAO 
+12 			ESCREVA"Sua categoria é infantil A"
+13 	FIM_ALGORITMO
 ```
