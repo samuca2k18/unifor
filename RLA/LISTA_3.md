@@ -72,22 +72,29 @@ B --> D
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite um numero}}
-B --> C[/Num/]
-C --> D[total =+ Num]
-D --> E{Se Num == 0}
-E -->|Sim|F{{O total dos numeros foi,total}}
-F --> Z([Fim])
-E -->|não| B
+B --> C[/N/]
+C --> D [I = 0]
+D --> E{{digite um numero}}
+E --> F[/Num/]
+F -->G [total =+ Num]
+G --> H{Se I == N}
+H -->|Sim|I{{O total dos numeros foi,total}}
+I --> Z([Fim])
+H -->|não| E
 ```
 
 ```
 1 	ALGORITMO SOMA
-2 	DECLARE Num,total: inteiro e numerico
-3 	REPITA
-4		ESCREVA"Digite um numero"
-5		LEIA Num
-6		total =+ Num
-7	ATE_QUE Num == 0
+2 	DECLARE Num, total, N, I : inteiro e numerico
+3   ESCREVA" DIGITE O LIMETE DA SEQUENCIA"
+4   LEIA N
+5   I = 0
+6 	REPITA
+7		ESCREVA"Digite um numero"
+8		LEIA Num
+9		total =+ Num
+10      I =+ 1
+7	ATE_QUE I == N
 8	ESCREVA"A soma total deu ", total
 9	FIM_ALGORITMO
 ```
@@ -114,15 +121,15 @@ H --> Z([Fim])
 ```
 
 ```
-1		 ALGORITMO_NOTAS
-2		 DECLARE Notas, Nota, Media, i : numerico
-3		 REPITA
-4			 ESCREVA" Digite uma nota:"
-5			 LEIA Nota
-6			 Notas =+ Nota
-7			 i =+ 1
-8		 ATE_QUE Nota < 0
-9		 Media = Notas/i
-10	  ESCREVA" Sua media é ", Media
-11	  FIM_ALGORITMO
+1  ALGORITMO_NOTAS
+2  DECLARE Notas, Nota, Media, i : numerico
+3  REPITA
+4    ESCREVA" Digite uma nota:"
+5    LEIA Nota
+6    Notas =+ Nota
+7    i =+ 1
+8  ATE_QUE Nota < 0
+9  Media = Notas/i
+10 ESCREVA" Sua media é ", Media
+11 FIM_ALGORITMO
 ```
