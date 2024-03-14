@@ -29,14 +29,14 @@ H --> G
 
 ```
 
-
+```
 | N1 | N1 < 0  | N1 % 2 == 0 | Saída |
 | -- | -- | -- | -- | -- | 
 | -1 | V |   | "Digite um numero: " |
 | 0  | F | V | "O número é par!" |
 | 13 | F | F | "O número é impar!" |
 | 30 | F | V | "O número é par!" |
-
+```
 ### QUESTÃO 2
 
 ```mermaid
@@ -57,6 +57,16 @@ B --> D
 5 	FIM_PARA
 6	FIM_ALGORITMO
 
+```
+```
+| N | I | PASSO 3 | Saída |
+| -- | -- | -- | -- | -- | 
+| 30 | 0 | + 3 | 0 |
+| 30 | 3 | + 3 |  3 |
+| 30 | 6 | + 3 |  6 |
+| 30 | 9 | + 3 | 9  |
+|...|...|...|...
+|30|30| 0|30
 ```
 ### QUESTÃO 3
 ```mermaid
@@ -80,6 +90,14 @@ E -->|não| B
 7	ATE_QUE Num == 0
 8	ESCREVA"A soma total deu ", total
 9	FIM_ALGORITMO
+```
+```
+| Num | total =+ Num | Num == 0 | Saída |
+| -- | -- | -- | -- | -- | 
+| 3 | 3 | F  |  |
+| 9  | 12 | F |  |
+| 13 | 25 | F |  |
+| 0 | 25 | V | "O total é 25" |
 ```
 ### QUESTÃO 4
 ```mermaid
