@@ -7,13 +7,27 @@ Dadas duas variáveis, $a$ e $b$, implemente e teste um algoritmo para trocar os
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B[A = 10]
+B --> C[B = 8]
+C --> D[C = A]
+D --> E[A = B]
+E --> F[B = C]
+F --> G{{ESCREVA, A, B}}
+G --> F([FIM])
 ```
 
 #### Pseudocódigo (0.5 ponto)
 
 ```
 Algoritmo TrocaValores
+DECLARE A, B, C: REAIS
+ESCREVA A, B
+A = 10
+B = 8
+C = A
+A = B
+B = C
+ESCREVA A, B
 FIM_ALGORITMO
 ```
 
