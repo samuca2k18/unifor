@@ -73,14 +73,15 @@ B --> D
 flowchart TD
 A([Inicio]) --> B{{Digite um numero}}
 B --> C[/N/]
-C --> D [I = 0]
+C --> D[I = 0]
 D --> E{{digite um numero}}
 E --> F[/Num/]
-F -->G [total =+ Num]
-G --> H{Se I == N}
-H -->|Sim|I{{O total dos numeros foi,total}}
-I --> Z([Fim])
-H -->|não| E
+F --> G[total =+ Num]
+G --> H[I =+ 1]
+H --> I{Se I == N}
+I -->|Sim|J{{O total dos numeros foi,total}}
+J --> Z([Fim])
+ -->|não| E
 ```
 
 ```
@@ -111,13 +112,15 @@ H -->|não| E
 flowchart TD
 A([Inicio]) --> B{{Digite a nota:}}
 B --> C[/Nota/]
-C --> D[Notas =+ Nota]
-D --> E[I =+1]
-E --> F{{Se Nota < 0}}
-F -->|não| B
-F -->|sim| G[media = Notas/I]
-G --> H{{Sua media é, media}}
-H --> Z([Fim])
+C --> D{{SE NOTA > 0}}
+D -->|SIM| E[Notas =+ Nota]
+D -->|NÃO| G
+E --> F[I =+1]
+F --> G{{Se Nota < 0}}
+G -->|não| B
+G -->|sim| H[media = Notas/I]
+H --> I{{Sua media é, media}}
+I --> Z([Fim])
 ```
 
 ```
@@ -126,6 +129,7 @@ H --> Z([Fim])
 3  REPITA
 4    ESCREVA" Digite uma nota:"
 5    LEIA Nota
+6    SE Nota > 0
 6    Notas =+ Nota
 7    i =+ 1
 8  ATE_QUE Nota < 0
