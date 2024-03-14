@@ -1,3 +1,4 @@
+### QUESTÃO 1
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite um numero: }}
@@ -27,7 +28,7 @@ H --> G
 13	FIM_ALGORITMO
 
 ```
-
+### QUESTÃO 2
 
 ```mermaid
 flowchart TD
@@ -48,7 +49,30 @@ B --> D
 6	FIM_ALGORITMO
 
 ```
+### QUESTÃO 3
+```mermaid
+flowchart TD
+A([Inicio]) --> B{{Digite um numero}}
+B --> C[/Num/]
+C --> D[total =+ Num]
+D --> E{Se Num == 0}
+E -->|Sim|F{{O total dos numeros foi,total}}
+F --> Z([Fim])
+E -->|não| B
+```
 
+```
+1 	ALGORITMO SOMA
+2 	DECLARE Num,total: inteiro e numerico
+3 	REPITA
+4		ESCREVA"Digite um numero"
+5		LEIA Num
+6		total =+ Num
+7	ATE_QUE Num == 0
+8	ESCREVA"A soma total deu ", total
+9	FIM_ALGORITMO
+```
+### QUESTÃO 4
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite a nota:}}
