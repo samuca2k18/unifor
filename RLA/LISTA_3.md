@@ -65,12 +65,13 @@ H --> Z([Fim])
 ```
 1 	ALGORITMO_NOTAS
 2 	DECLARE Notas, Nota, Media, i : numerico
-3 	ESCREVA"Digite a nota:"
-4	LEIA Nota
-5	Notas =+ Nota
-6	i =+ 1
-7 	SE Nota < 0
-8		ENTÂO media = Notas/i
-9	ESCREVA"Sua media é", media
-10	FIM_ALGORITMO
+3   REPITA
+4 	  ESCREVA"Digite a nota:"
+5  	  LEIA Nota
+6	    Notas =+ Nota
+7	    i =+ 1
+8 	ATE_QUE Nota < 0
+9		media = Notas/i
+10	  ESCREVA"Sua media é", media
+11	FIM_ALGORITMO
 ```
