@@ -28,6 +28,15 @@ H --> G
 13	FIM_ALGORITMO
 
 ```
+
+
+| N1 | N1 < 0  | N1 % 2 == 0 | Saída |
+| -- | -- | -- | -- | -- | 
+| -1 | V |   | "Digite um numero: " |
+| 0  | F | V | "O número é par!" |
+| 13 | F | F | "O número é impar!" |
+| 30 | F | V | "O número é par!" |
+
 ### QUESTÃO 2
 
 ```mermaid
