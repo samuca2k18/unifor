@@ -13,7 +13,7 @@ C --> D[C = A]
 D --> E[A = B]
 E --> F[B = C]
 F --> G{{ESCREVA, A, B}}
-G --> F([FIM])
+G --> Z([FIM])
 ```
 
 #### Pseudocódigo (0.5 ponto)
