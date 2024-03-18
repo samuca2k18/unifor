@@ -45,17 +45,49 @@ Será considerado aprovado o aluno que tirar $nota$ 50 ou maior (no intervalo de
 
 #### Fluxograma (0.25 ponto)
 
-```mermaid
+```mermaid 
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{ESCREVA O NUMERO DE NOTAS}}
+B --> C[/N/]
+C --> D[I = 0]
+D --> E{SE I != N}
+E -->|SIM| F{{ESCREVA NOTA DO ALUNO}}
+F --> G[/Nota/]
+G --> H{SE Nota >= 50}
+H -->|SIM| I[Cont =+ 1]
+I --> J[I =+ 1]
+J --> E
+H -->|NÃO| K[I =+ 1]
+K --> E
+E -->|NÃO| L{{O NUMERO DE ALUNOS APROVADOS FOI, Cont}}
+L --> M([FIM])
 ```
+
 
 #### Pseudocódigo (0.5 ponto)
 
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+ALGORITMO ALUNOS_APROVADOS
+DECLARE N, I, Cont, Nota : NUMERICO INTEIRO
+INCIO
+ESCREVA "DIGITE NUMERO DE NOTAS: "
+LEIA N
+I = 0
+Cont = 0
+ENQUANTO I != N FAÇA
+	ESCREVA "DIGITE NOTA DO ALUNO"
+	LEIA Nota
+	SE NOTA >= 50
+		Cont =+ 1
+		I =+ 1
+	SENÃO
+		I =+ 1
+FIM_ENQUANTO
+ESCREVA "NUMERO DE ALUNOS APROVADO FOI ", Cont
+FIM_ALGORITMO 
+
 ```
+
 
 #### Teste de mesa (0.25 ponto)
 
@@ -73,14 +105,42 @@ Aceite apenas $n$ maior ou igual a zero.
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{ESCREVA NUMERO TOTAL DE NUMEROS}}
+B --> C[/N/]
+C --> D[I = 0]
+D --> E{SE I != N }
+E -->|SIM| F{{ESCREVA UM NUMERO}}
+F --> G[/Num/]
+G --> H{SE Num >= 0}
+H -->|SIM| I[soma =+ Num]
+I --> J[I =+ 1]
+J --> E
+H -->|NÃO| E
+E -->|NÃO| K{{A SOMA TOTAL DOS NUMEROS É, soma}}
+K --> Z([FIM])
+
 ```
 
 #### Pseudocódigo (0.5 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO SOMA_TOTAL
+DECLARE I, N, soma, Num: NUMERICO
+INICIO
+ESCREVA "DIGITE QUANTOS NUMERO SERA: "
+LEIA N
+I = 0
+soma = 0
+ENQUANTO I != N FAÇA
+	ESCREVA "DIGITE UM NUMERO"
+	LEIA Num
+	SE Num >= 0
+		soma =+ Num
+		I =+ 1
+FIM_ENQUANTO
+ESCREVA "A SOMA TOTAL DOS NUMEROS É", soma
 FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -100,14 +160,37 @@ $$ S = \frac{1}{2} + \frac{3}{4} + \frac{5}{6} + \frac{7}{8} + \dots $$
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{ESCREVA O NUMERO DE TERMOS}}
+B --> C[/N/]
+C --> D[I = 0]
+D --> E{SE I != N}
+E -->|SIM| F["soma = (1 + I * 2)/(2 + I * 2)"]
+F --> G[S =+ soma]
+G --> H[I =+ 1]
+H --> E
+E -->|NÃO| I{{SOMA TOTAL DOS ELEMENTOS É, S}}
+I --> Z([FIM])
 ```
+
 
 #### Pseudocódigo (0.5 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO SOMA_DE_N_ELEMENTOS
+DECLARE I, N, soma, S: NUMERICO INTEIRO
+INCIO
+ESCREVA" Digite quantos termos serâo: "
+LEIA N
+I = 0
+soma = 1/2
+ENQUANTO I != N FAÇA
+	soma = (1 + I * 2)/(2 + I * 2)
+	S =+ soma
+	I =+ 1
+FIM_ENQUANTO
+ESCREVA "SOMA TOTAL DOS ELEMENTOS É ", S
 FIM_ALGORITMO
+
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -123,11 +206,22 @@ Dado um número $n$, implemente e teste um algoritmo para calcular o fatorial de
 
 #### Fluxograma (0.5 ponto)
 
-```mermaid
-flowchart TD
-A([INICIO]) --> B([FIM])
-```
 
+```mermaid 
+flowchart TD
+A([INICIO]) --> B{{ESCREVA QUAL NUMERO SERA FATORIAL: }}
+B --> C[/N/]
+C --> D[I = 0]
+D --> E{SE N >= 0}
+E -->|NÃO| B
+E -->|SIM| F{SE I != N}
+ F -->|SIM| G[total *= I]
+ G --> H[I += 1]
+ H --> F
+ F -->|NÃO| I{{O TOTAL DEU, total}}
+ I --> Z([FIM])
+
+```
 #### Pseudocódigo (1.0 ponto)
 
 ```
