@@ -81,7 +81,7 @@ G --> H[I =+ 1]
 H --> I{Se I == N}
 I -->|Sim|J{{O total dos numeros foi,total}}
 J --> Z([Fim])
- -->|não| E
+I -->|não| E
 ```
 
 ```
