@@ -51,11 +51,11 @@ B --> D
 
 ```
 1 	ALGORITMO MULTIPLO_DE_3
-2	DECLARE I: NUMERICO INTEIRO
-3	PARA I DE 0 ATE 30 PASSO 3
+2	  DECLARE I: NUMERICO INTEIRO
+3	  PARA I DE 0 ATE 30 PASSO 3
 4 		ESCREVA(I)
 5 	FIM_PARA
-6	FIM_ALGORITMO
+6  	FIM_ALGORITMO
 
 ```
 ```
@@ -130,8 +130,8 @@ I --> Z([Fim])
 4    ESCREVA" Digite uma nota:"
 5    LEIA Nota
 6    SE Nota > 0
-6    Notas =+ Nota
-7    i =+ 1
+6      Notas =+ Nota
+7      i =+ 1
 8  ATE_QUE Nota < 0
 9  Media = Notas/i
 10 ESCREVA" Sua media é ", Media
