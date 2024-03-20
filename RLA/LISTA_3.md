@@ -126,14 +126,15 @@ I --> Z([Fim])
 ```
 1  ALGORITMO_NOTAS
 2  DECLARE Notas, Nota, Media, i : numerico
-3  REPITA
-4    ESCREVA" Digite uma nota:"
-5    LEIA Nota
-6    SE Nota > 0
-6      Notas =+ Nota
-7      i =+ 1
-8  ATE_QUE Nota < 0
-9  Media = Notas/i
-10 ESCREVA" Sua media é ", Media
-11 FIM_ALGORITMO
+3  i = 0
+4  REPITA
+5    ESCREVA" Digite uma nota:"
+6    LEIA Nota
+7    SE Nota > 0
+8      Notas =+ Nota
+9      i =+ 1
+10 ATE_QUE Nota < 0
+11 Media = Notas/i
+12 ESCREVA" Sua media é ", Media
+13 FIM_ALGORITMO
 ```
