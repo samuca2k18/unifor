@@ -109,7 +109,7 @@ A([INICIO]) --> B{{ESCREVA NUMERO TOTAL DE NUMEROS}}
 B --> C[/N/]
 C --> D[I = 0]
 D --> N{SE N >= 0}
-N --|SIM|> E{SE I != N }
+N -->|SIM| E{SE I != N }
 E -->|SIM| F{{ESCREVA UM NUMERO}}
 F --> G[/Num/]
 G --> H{SE Num >= 0}
