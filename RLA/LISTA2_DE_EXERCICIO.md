@@ -21,7 +21,7 @@ E --> z([Fim])
 7 FIM_ALGORITMO
 
 ```
-
+### QUESÃO 2
 ```mermaid
 flowchart TD
 
@@ -45,7 +45,7 @@ F --> G([Fim])
 
 
 ```
-
+### QUESTÃO 3
 ```mermaid
 flowchart TD
 
@@ -68,7 +68,7 @@ E --> F([Fim])
 
 ```
 
-
+### QUESTÃO 4
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite o custo de fabrica do carro:}}
@@ -89,6 +89,7 @@ E --> F([Fim])
 7 FIM ALGORITMO
 
 ```
+### QUESTÃO 5
 ```mermaid 
 flowchart TD
 A([inicio]) --> B{{Digite um numero}}
@@ -104,7 +105,7 @@ D --> E([fim])
 5 ESCREVA"Numero ", num," ao quadrado é ",num ** 2
 6 FIM_ALGORITMO
 ```
-
+### QUESTÃO 6
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite quantos hamburgues foram consumidos}}
@@ -133,7 +134,7 @@ M --> N([Fim])
 
 ```
 
-
+### QUESTÃO 7
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite o nome do funcionario, numero de carros vendidos e valor total das vendas}}
@@ -154,7 +155,7 @@ D --> E{{Salario do funcionario, Nome, é de ,total, reais}}
 8 FIM_ALGORITMO
 ```
 
-
+### QUESTÃO 8
 ```mermaid
 flowchart TD
 A([inicio]) --> B{{Digite o nome do aluno, a nota da prova e a nota qualitativa}}
@@ -175,7 +176,7 @@ D --> E{{A media do aluno, Nome, é ,media,}}
 
 ```
 
-
+### QUESTÃO 9
 ```mermaid 
 flowchart TD
 A([Inicio]) --> B{{Digite o nome do aluno, email e curso do aluno}}
@@ -197,7 +198,7 @@ F --> G([Fim])
 8 ESCREVA "Os dados do aluno Nome: ", Nome," sua matricula: ", Matricula," seu curso: ", Curso," sua idade: ", Idade," e o emai: ", Email  
 9 FIM_ALGORITMO
 ```
-
+### QUESTÃO 10
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite o raio}}
@@ -221,7 +222,7 @@ F --> G([fim])
 
 ```
 
-
+### QUESTÃO 11
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite um numero: }}
@@ -239,7 +240,7 @@ D --> E([Fim])
 5 ESCREVA "O numero ao quadrado é ", N1 ** 2, " o numero ao cubo é ", N1 ** 3, " a raiz quadrada do numero é ", N1 ** 1/2, " a raiz cubica do numero é ", N1 ** 1/3
 6 FIM_ALGORITMO
  ```
-
+### QUESTÃO 12
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite 3 numeros: }}
@@ -284,7 +285,7 @@ N --> Z
 18			 ESCREVA "N3,N2,N1"
 19 FIM_ALGORITMO		
 ```
-
+### QUESTÃO 13
 ```mermaid
 flowchart TD
 A([Inicio]) --> B{{Digite sua idade}}
@@ -321,4 +322,55 @@ L --> Z
 11 	SENAO 
 12 			ESCREVA"Sua categoria é infantil A"
 13 	FIM_ALGORITMO
+```
+### QUESTÃO 14
+```mermaid
+flowchart TD
+A([Início])-->B{{"Digite dois números:"}}
+B-->C[\n1,n2\]
+C-->D{{"Digite o operador (+, -, *, /):"}}
+D-->E[\operador\]
+E-->F{operador==+}
+F--NAO-->G{operador==-}
+G--NAO-->H{operador==*}
+H--NAO-->I{operador==/}
+I-->J{n2 =! 0}
+J--NAO-->K{{"divisão por zero"}}
+J--SIM-->L[resultado <-- n1 / n2]
+F--SIM-->M[resultado <-- n1 + n2]
+G--SIM-->N[resultado <-- n1 - n2]
+H--SIM-->O[resultado <-- n1 * n2]
+L-->P{{resultado}}
+M-->P{{resultado}}
+N-->P{{resultado}}
+O-->P{{resultado}}
+P-->Q([Fim])
+K-->Q([Fim])
+```
+### Pseudocódigo
+```
+	ALGORITMO calculadora_simples
+	DECLARE n1, n2, resultado: float
+	DECLARE operador, +, -, *, / : operadores
+		INICIO
+			ESCREVA "Digite dois números e uma operação:"
+			LEIA n1, n2, operador
+			SE operador ← + ENTAO
+				resultado == n1 + n2
+			FIM_SE
+			SE operador ← - ENTAO
+				resultado == n1 - n2
+			FIM_SE
+			SE operador ← * ENTAO
+				resultado == n1 * n2
+			FIM_SE
+			ENQUANTO operador ← / e n2 = 0 FAÇA
+				ESCREVA "ERRO: divisão por zero"
+			FIM_ENQUANTO
+			SE operador ← / e n2 =! 0 ENTAO
+				resultado == n1 / n2
+			FIM_SE
+			LEIA resultado
+			ESCREVA resultado
+		FIM
 ```
