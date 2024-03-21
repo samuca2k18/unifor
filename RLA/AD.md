@@ -225,10 +225,21 @@ E -->|SIM| F{SE I != N}
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO NUMERO_FATORIAL
+DECLARE N, I, TOTAL: NUMERICO INTEIRO
+INCIO
+I = 0
+REPITA
+	ESCREVA "ESCOLHA UM NUMERO POSITIVO: "
+	LEIA N
+ATE_QUE N >= 0
+ENQUANTO I != 0 FAÇA
+	TOTAL *= I
+	I += 1
+FIM_ENQUANTO
+ESCREVA "TOTAL DEU ", TOTAL
 FIM_ALGORITMO
 ```
-
 #### Teste de mesa (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
@@ -244,17 +255,49 @@ Cada termo, além dos dois primeiros, é derivado da soma dos seus dois antecess
 
 #### Fluxograma (0.5 ponto)
 
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{ESCREVA TOTAL DE SEQUENCIA:}}
+B --> C[/N/]
+C --> D[I = 0]
+D --> E[soma = 0]
+E --> F[num_anterior = 0]
+F --> Z{{num_anterior}}
+Z --> G[num_atual = 1]
+G --> H{SE I != N}
+H -->|SIM| I[soma = num_atual + num_anterior]
+I --> J[num_anterior = num_atual]
+J --> K[num_atual = soma]
+K --> L[I += 1]
+L --> M{{ESCREVA,soma}}
+M --> H
+H -->|NÃO| N([FIM])  
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO_FIBONACCI
+DECLARE I, N, num_anterior, num_atual, soma: numerico inteiro
+INICIO
+ESCREVA "digite o numero de termos: "
+LEIA N
+num_anterior = 0
+num_atual = 1
+i = 0
+ESCREVA num_anterior
+ENQUANTO I != N FAÇA
+	soma = num_atual + num_anterior
+	num_anterior = num_atual
+	num_atual = soma
+	i += 1
+	ESCREVA soma
+FIM_ENQUANTO
 FIM_ALGORITMO
 ```
+
 #### Teste de mesa (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
@@ -268,18 +311,35 @@ Implemente e teste um algoritmo para inverter a ordem dos dígitos de um número
 
 #### Fluxograma (0.5 ponto)
 
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{ESCREVA UM NUMERO COM 2 DIGITOS:}}
+B --> C[/N/]
+C --> D{N >= 10 E N < 100}
+D -->|NÃO|B
+D -->|SIM| E[ultimo_digito = N % 10]
+E --> F["num_invertido = (ultimo_digito * 10) + (N // 10)"]
+F --> G{{O NUMERO INVERTIDO É, num_invertido}}
+G --> Z([FIM])
 ```
+
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO_INVERSÃO_DE_NUMERO
+DECLARE N, ultimo_digito, num_invertido: numerico inteiro
+INICIO
+REPITA
+	ESCREVA "DIGITE UM NUMERO COM 2 DIGITOS: "
+	LEIA N
+ATE_QUE N >= 10 E N < 100
+ultimo_digito = N % 10
+num_invertido = (ultimo digito * 10) + (N // 10)
+ESCREVA "O NUMERO INVERTIDO DE ", N, "É ",num_invertido
 FIM_ALGORITMO
 ```
-
 #### Teste de mesa (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
