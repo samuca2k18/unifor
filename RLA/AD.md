@@ -108,7 +108,8 @@ flowchart TD
 A([INICIO]) --> B{{ESCREVA NUMERO TOTAL DE NUMEROS}}
 B --> C[/N/]
 C --> D[I = 0]
-D --> E{SE I != N }
+D --> N {SE N >= 0}
+N --|SIM|> E{SE I != N }
 E -->|SIM| F{{ESCREVA UM NUMERO}}
 F --> G[/Num/]
 G --> H{SE Num >= 0}
@@ -118,7 +119,7 @@ J --> E
 H -->|NÃO| E
 E -->|NÃO| K{{A SOMA TOTAL DOS NUMEROS É, soma}}
 K --> Z([FIM])
-
+N -->|NÃO| Z
 ```
 
 #### Pseudocódigo (0.5 ponto)
@@ -130,15 +131,18 @@ INICIO
 ESCREVA "DIGITE QUANTOS NUMERO SERA: "
 LEIA N
 I = 0
-soma = 0
-ENQUANTO I != N FAÇA
-	ESCREVA "DIGITE UM NUMERO"
-	LEIA Num
-	SE Num >= 0
-		soma =+ Num
-		I =+ 1
-FIM_ENQUANTO
-ESCREVA "A SOMA TOTAL DOS NUMEROS É", soma
+SE N >= 0
+	soma = 0
+	ENQUANTO I != N FAÇA
+		ESCREVA "DIGITE UM NUMERO"
+		LEIA Num
+		SE Num >= 0
+			soma =+ Num
+			I =+ 1
+	FIM_ENQUANTO
+	ESCREVA "A SOMA TOTAL DOS NUMEROS É", soma
+SENÃO
+	ESCREVA" O NUMERO DEVE SER POSITIVO"
 FIM_ALGORITMO
 
 ```
@@ -187,7 +191,7 @@ INCIO
 ESCREVA" Digite quantos termos serâo: "
 LEIA N
 I = 0
-soma = 1/2
+soma = 0
 ENQUANTO I != N FAÇA
 	soma = (1 + I * 2)/(2 + I * 2)
 	S =+ soma
